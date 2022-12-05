@@ -110,7 +110,7 @@
     </style>
   </head>
   <body>
-      <div id="contentToWrite" class="comments" style="color:blue;">Merry Christmas for Miss.RU💕</br></div>
+      <div id="contentToWrite" class="comments" style="color:blue;">for Miss.RU💕</br></div>
        <audio id="music" autoplay="autoplay" controls="controls" loop="loop" preload="auto" src="http://music.163.com/song/media/outer/url?id=1348553473.mp3">
 		</audio>
     <canvas id="pinkboard" width="1920" height="947"></canvas>
@@ -167,32 +167,6 @@
       var canvas = document.getElementById("canvas");
       var ctx = canvas.getContext("2d");
       let count = 1;
- 
-      var ww = window.innerWidth;
-      var wh = window.innerHeight;
- 
-      var hearts = [];
- 
-      function init() {
-        requestAnimationFrame(render);
-        canvas.width = ww;
-        canvas.height = wh;
-        for (var i = 0; i < 100; i++) {
-          hearts.push(new Heart());
-        }
-      }
- 
-      function Heart() {
-        this.x = Math.random() * ww;
-        this.y = Math.random() * wh;
-        this.opacity = Math.random() * 0.5 + 0.5;
-        this.vel = {
-          x: (Math.random() - 0.5) * 4,
-          y: (Math.random() - 0.5) * 4,
-        };
-        this.targetScale = Math.random() * 0.15 + 0.02;
-        this.scale = this.targetScale * Math.random();
-      }
  
       Heart.prototype.update = function (i) {
         this.x += this.vel.x;
